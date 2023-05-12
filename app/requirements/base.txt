@@ -11,3 +11,4 @@ djangorestframework-simplejwt==5.2.0
 drf-spectacular==0.22.1
 Faker==13.15.0
 pillow==9.5.0
+requests
