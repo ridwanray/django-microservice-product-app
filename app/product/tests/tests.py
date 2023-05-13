@@ -25,7 +25,6 @@ class TestProductCRUD:
 
     def test_deny_create_to_nonauthenticated(self, api_client):
         data = {"name": "Name1", "description": "Just description"}
-        api_client_with_credentials(api_client)
         response = api_client.post(self.product_list_url, data)
         assert response.status_code == 401
 
