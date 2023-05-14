@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
-from core.authentication.permissions import IsAdmin
+from micro_shared_lib.authentication.permissions import IsAdmin
 
 
 from .models import Product
