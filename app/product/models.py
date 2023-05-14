@@ -1,4 +1,4 @@
-from core.models import AuditableModel
+from micro_shared_lib.models import AuditableModel
 from django.db import models
 
 

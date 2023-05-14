@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django_filters',
     'drf_spectacular',
     'core.celery.CeleryConfig',
+    'micro_shared_lib',
 
     #Local Apps
     'product',
@@ -127,7 +128,7 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "core.pagination.CustomPagination",
     "PAGE_SIZE": 20,
     "DEFAULT_AUTHENTICATION_CLASSES": (
-        "core.authentication.auth.CustomJWTAuthentication",
+        "micro_shared_lib.authentication.auth.CustomJWTAuthentication",
         "rest_framework.authentication.BasicAuthentication",
         "rest_framework.authentication.SessionAuthentication",
     ),

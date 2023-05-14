@@ -1,6 +1,6 @@
 import pytest
 from rest_framework.test import APIClient
-from core.authentication.auth import UserData
+from micro_shared_lib.authentication.auth import UserData
 from pytest_factoryboy import register
 from .factories import ProductFactory
 
@@ -20,7 +20,7 @@ def api_client_with_credentials(api_client):
 @pytest.fixture
 def user_with_specific_permission(mocker):
     def _user(is_admin=False):
-        mock_auth = mocker.patch("core.authentication.auth.get_auth_user")
+        mock_auth = mocker.patch("micro_shared_lib.authentication.auth.get_auth_user")
         mocked_user_data = {
             "id": "def93efb-18c5-4c5e-a8d3-9092675ee3e6",
             "username": "ray",
